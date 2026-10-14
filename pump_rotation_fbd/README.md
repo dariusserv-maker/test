@@ -1,6 +1,12 @@
 # Two-pump rotation FBD
 
-IEC FBD review diagram based on the two-pump specification: nine ordered networks, named signal connectors, and directional wires.
+IEC FBD review diagram based on the two-pump specification: nine ordered networks, 75 blocks, and 164 directional input wires. Updated to match the supplied HVAC editor screenshot: grid background, grey headers, violet signal rows, yellow footers, and orthogonal wiring.
+
+Internal connections are drawn directly. Cross-network signals have named connectors identifying their source network. Previous-scan state reads are explicitly marked. Block numbering preserves the original execution order; geometric placement follows data flow.
+
+![Availability and alarm network](hvac_preview_03.png)
+
+![Emergency and rotation arbitration](hvac_preview_07.png)
 
 - [Editable diagrams.net diagram](pump_rotation_fbd.drawio)
 - [SVG diagram](pump_rotation_fbd.svg)
