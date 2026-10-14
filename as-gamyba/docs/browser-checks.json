@@ -1,0 +1,86 @@
+{
+  "viewports_and_routes": [
+    {
+      "viewport": 1440,
+      "route": "/",
+      "status": "PASS"
+    },
+    {
+      "viewport": 1440,
+      "route": "/paslaugos/",
+      "status": "PASS"
+    },
+    {
+      "viewport": 1440,
+      "route": "/projektai/",
+      "status": "PASS"
+    },
+    {
+      "viewport": 1440,
+      "route": "/kompetencijos/",
+      "status": "PASS"
+    },
+    {
+      "viewport": 1440,
+      "route": "/kontaktai/",
+      "status": "PASS"
+    },
+    {
+      "viewport": 390,
+      "route": "/",
+      "status": "PASS"
+    },
+    {
+      "viewport": 390,
+      "route": "/paslaugos/",
+      "status": "PASS"
+    },
+    {
+      "viewport": 390,
+      "route": "/projektai/",
+      "status": "PASS"
+    },
+    {
+      "viewport": 390,
+      "route": "/kompetencijos/",
+      "status": "PASS"
+    },
+    {
+      "viewport": 390,
+      "route": "/kontaktai/",
+      "status": "PASS"
+    },
+    {
+      "viewport": 320,
+      "route": "/",
+      "status": "PASS"
+    },
+    {
+      "viewport": 320,
+      "route": "/paslaugos/",
+      "status": "PASS"
+    },
+    {
+      "viewport": 320,
+      "route": "/projektai/",
+      "status": "PASS"
+    },
+    {
+      "viewport": 320,
+      "route": "/kompetencijos/",
+      "status": "PASS"
+    },
+    {
+      "viewport": 320,
+      "route": "/kontaktai/",
+      "status": "PASS"
+    }
+  ],
+  "mobile_menu": "PASS",
+  "keyboard_escape": "PASS",
+  "placeholder_filters": "PASS",
+  "clipboard_brief": "PASS",
+  "local_links_and_anchors": 18,
+  "404": "PASS",
+  "javascript_errors": []
+}
