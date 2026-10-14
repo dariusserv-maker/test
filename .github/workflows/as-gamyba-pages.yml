@@ -7,12 +7,14 @@ on:
       - '.github/workflows/as-gamyba-pages.yml'
   workflow_dispatch:
 permissions:
-  contents: write
+  contents: read
+  pages: write
+  id-token: write
 concurrency:
   group: as-gamyba-pages
   cancel-in-progress: false
 jobs:
-  build-and-publish:
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -25,6 +27,16 @@ jobs:
           BASE_PATH: /${{ github.event.repository.name }}
           SITE_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/
         run: npm run build
-      - name: Publish generated files to gh-pages
-        working-directory: as-gamyba
-        run: node scripts/publish-pages.mjs
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: as-gamyba/dist
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy preview to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

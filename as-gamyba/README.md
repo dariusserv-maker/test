@@ -79,11 +79,11 @@ GitHub peržiūrai paruoštos šakos `as-gamyba-preview` (šaltiniai) ir `gh-pag
 
 Numatytas adresas: https://dariusserv-maker.github.io/test/
 
-Vienkartinis įjungimas, jei Pages dar neaktyvus: GitHub saugykloje **Settings → Pages → Build and deployment → Source: Deploy from a branch → Branch: gh-pages → / (root) → Save**.
+Vienkartinis įjungimas: GitHub saugykloje **Settings → Pages → Build and deployment → Source: GitHub Actions**. Jei ankstesnis paleidimas nepavyko, atverti **Actions → AS gamyba preview** ir pakartoti paleidimą arba pasirinkti **Run workflow**, šaką `as-gamyba-preview`. Jeigu aplinkos `github-pages` taisyklės riboja šakas, leisti `as-gamyba-preview` per Settings → Environments.
 
-`.github/workflows/as-gamyba-pages.yml` po `as-gamyba-preview` šakos pakeitimų automatiškai sugeneruoja ir įkelia tik svetainės failus į `gh-pages`. Darbo eiga išsaugo ankstesnių publikacijų istoriją ir nenaudoja force push. Jai reikalingas leidimas `contents: write`; pirmą kartą paleidimą galima stebėti GitHub Actions. GitHub Pages turi būti įjungtas atskirai, o GitHub Actions turi būti leidžiamas saugykloje.
+`.github/workflows/as-gamyba-pages.yml` po `as-gamyba-preview` šakos pakeitimų automatiškai sugeneruoja svetainę, įkelia artefaktą ir publikuoja per oficialų `actions/deploy-pages`. Šis būdas nepriklauso nuo pakartotinio branch build aktyvavimo. `gh-pages` šaka papildomai saugo jau sugeneruotą pirmos versijos turinį, tačiau automatinei peržiūrai naudojama GitHub Actions publikacija. GitHub Actions ir Pages turi būti leidžiami saugykloje.
 
-Rankinis publikavimo pakartojimas su esama Git autentifikacija:
+Papildomos `gh-pages` failų kopijos atnaujinimas su esama Git autentifikacija (tai savaime neaktyvina Actions publikacijos):
 
 ```sh
 BASE_PATH=/test SITE_URL=https://dariusserv-maker.github.io/test/ npm run build
