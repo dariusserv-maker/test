@@ -1,11 +1,13 @@
 {
   "name": "MB „AS gamyba“",
-  "email": "",
-  "phone": "",
-  "address": "",
-  "companyCode": "",
-  "vatCode": "",
-  "siteUrl": "",
+  "email": "info@asgamyba.lt",
+  "phone": "+370 610 01713",
+  "address": "J. Janonio g. 8, Prienai",
+  "companyCode": "305725386",
+  "vatCode": "LT100013926116",
+  "siteUrl": "https://asgamyba.lt/",
   "logo": "/assets/logo.svg",
-  "logoAlt": "AS gamyba – įmonės logotipas"
+  "logoAlt": "AS gamyba – įmonės logotipas",
+  "domain": "asgamyba.lt",
+  "founded": "2021-04-02"
 }

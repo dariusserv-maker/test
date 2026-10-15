@@ -26,7 +26,7 @@ Kitas prievadas: `PORT=8080 npm run dev` (POSIX aplinkoje).
 - `/paslaugos/` — 8 paslaugų aprašymai, in-page navigacija, darbo eiga.
 - `/projektai/` — neutrali projektų struktūra su veikiančiais filtrais.
 - `/kompetencijos/` — įmonės kryptis, auditorijos ir kompetencijų pagrindimo vieta.
-- `/kontaktai/` — tikrų kontaktų vieta ir vietinis užklausos ruošinio kopijavimas.
+- `/kontaktai/` — įmonės pateikti kontaktai, rekvizitai, el. pašto nuoroda ir vietinis užklausos ruošinio kopijavimas.
 
 Sitemap, wireframe, tokenai ir UX sprendimai: [docs/STRUKTURA-IR-DIZAINAS.md](docs/STRUKTURA-IR-DIZAINAS.md).
 
@@ -91,3 +91,7 @@ node scripts/publish-pages.mjs
 ```
 
 `noindex` paliktas peržiūros puslapiuose. Tai nėra slaptažodžio apsauga: įjungta Pages peržiūra bus pasiekiama pagal jos adresą.
+
+## Turinio būsena
+
+Įvesti 2026-10-15 įmonės pateikti kontaktai, rekvizitai, įkūrimo data ir veiklos aprašymas. Specialistai pristatomi bendrai, jų asmeninės informacijos neviešinant. Tikri projektai atidedami vėlesniam etapui. SSVA / VERT dokumentų numerių, veiklos apimties ir galiojimo nepriklausoma patikra tebėra neatlikta dėl aplinkos tinklo apribojimo; žr. [turinio šaltinius](docs/TURINIO-SALTINIAI.md). Domenas asgamyba.lt įrašytas į konfigūraciją, DNS ir Pages domeno nustatymai nekeisti.

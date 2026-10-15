@@ -23,7 +23,7 @@ Pradžia /
 │   ├── Patvirtinamų kompetencijų / dokumentų vieta
 │   └── Darbo eiga
 └── Kontaktai /kontaktai/
-    ├── Kontaktai ir rekvizitai — TODO
+    ├── Kontaktai ir rekvizitai
     └── Vietinis užklausos ruošinio kopijavimas
 ```
 
@@ -104,10 +104,10 @@ Kortelėse naudojamas antraštės, piktogramos, paaiškinimo ir kryptinės nuoro
 
 ## Turinio sąžiningumas ir neužbaigtos vietos
 
-- Kontaktai ir rekvizitai kol kas `TODO`. Telefono ir el. pašto nuorodos atsiras tik įvedus duomenis.
+- Kontaktai ir rekvizitai įvesti pagal įmonės pateiktus duomenis; el. pašto ir telefono nuorodos veikia.
 - Originalus logotipas pateiktas vartotojo ir naudojamas nekeičiant jo formos bei proporcijų.
 - Projektų kortelės nevaizduoja tikrų projektų. Filtrai leidžia išbandyti būsimos struktūros UX.
-- Komanda, istorija, dokumentai ir patvirtintos kvalifikacijos — `TODO`.
+- Įmonės įkūrimo data ir veiklos pristatymas įrašyti. Komandos nariai neviešinami. SSVA / VERT dokumentų numeriai, apimtis ir galiojimas lieka `TODO` iki registrų patikros.
 - Kontaktų forma nesiunčia duomenų: vietoje jos yra naudingas užklausos ruošinio kopijavimas.
 - Svetainė neindeksuojama: `noindex, nofollow` ir `robots.txt`. Prieš publikavimą reikia patvirtinti turinį, domeną ir pakeisti indeksavimo nustatymus.
 

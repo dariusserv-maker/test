@@ -34,6 +34,17 @@ with sync_playwright() as p:
  page.get_by_role('button',name='Visos kryptys').click();assert page.locator('[data-category]:visible').count()==3
  context.grant_permissions(['clipboard-read','clipboard-write']);page.goto(BASE+'/kontaktai/');page.get_by_role('button',name='Kopijuoti užklausos ruošinį').click();page.wait_for_function("document.querySelector('.copy-status').textContent.includes('nukopijuotas')")
  assert 'Objektas ir vieta' in page.evaluate('navigator.clipboard.readText()')
+ assert page.locator('.contact-heading .todo').count()==0
+ assert page.locator('a[href="mailto:info@asgamyba.lt"]').count()>=1
+ assert page.locator('a[href="tel:+37061001713"]').count()>=1
+ for value in ['J. Janonio g. 8, Prienai','305725386','LT100013926116']:
+  assert value in page.locator('.contact-heading').inner_text()
+ assert page.get_by_role('link',name='Rašyti el. paštu').get_attribute('href').startswith('mailto:info@asgamyba.lt?subject=')
+ page.goto(BASE+'/kompetencijos/')
+ assert page.locator('time[datetime="2021-04-02"]').count()==1
+ assert 'Komandos narių asmens duomenų neviešiname' in page.locator('main').inner_text()
+ assert page.locator('.evidence-list .todo').count()==3
+
  # Verify all local navigation and asset URLs against the actual server.
  links=set()
  for route in routes:
